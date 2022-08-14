@@ -1,0 +1,11 @@
+﻿<h2>Edit Student </h2>
+
+<form ng-submit="updateStudent(student)">
+    DepartmentId : <input type="text" ng-model="student.DepartmentId" /><br />
+    Name : <input type="text" ng-model="student.Name" /><br />
+    DOB : <input type="date" ng-model="student.DOB" /><br />
+    IsRegular : <input type="checkbox" ng-model="student.IsRegular" /><br />
+    Image : <input type="text" ng-model="student.ImagePath" /><br />
+
+    <input type="submit" value="Update" />
+</form>

@@ -1,0 +1,31 @@
+﻿<h2>Students</h2>
+<a href="#/addStudent">Create New</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>IsRegular</th>
+            <th>DepartmentName</th>
+            <th>Images</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="student in students">
+            <td>{{student.Id}}</td>
+            <td>{{student.Name}}</td>
+            <td ng-bind="ToDate(student.DOB)"></td>
+            <td>{{student.IsRegular}}</td>
+            <td>{{student.DepartmentName}}</td>
+            <td>{{student.ImagePath}}</td>
+            <td>
+                <a href="#/editStudent/{{student.Id}}">Edit</a>
+                <a href="" ng-click="deleteStudent(student.Id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
